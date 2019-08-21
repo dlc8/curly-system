@@ -1,0 +1,30 @@
+import math
+
+raw = [15, 12, 18, 13, 10, 11]
+
+sum=0
+for num in raw:
+    sum = sum +num
+m = sum / len(raw)
+m = round(m, 2)
+print(m)
+
+x = [round(raw[0]-m, 2), round(raw[1]-m, 2), round(raw[2]-m, 2), round(raw[3]-m, 2), round(raw[4]-m, 2)]
+print(x)
+
+
+ss=0
+for y in x:
+    ss = (ss +y)
+ss = round(ss, 2)
+ss = round(ss**2, 2)
+print("SS =", ss)
+
+variance = ss / len(raw)
+variance = round(variance, 2)
+print('Variance =', variance)
+
+
+SD= math.sqrt(variance)
+SD = round(SD, 2)
+print('Standard Deviation =', SD)
